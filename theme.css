@@ -1,34 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=PT+Mono&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 body {
-	--radius-s: 0px;
-	--radius-m: 0px;
-	--radius-l: 0px;
-	--input-radius: 0px;
-	--tab-radius-active: 0px;
-	--checkbox-radius: 0px;
-	--toggle-radius: 0px;
-	--toggle-thumb-radius: 0px;
-	--slider-thumb-radius: 0px;
-}
-
-.workspace-tab-header.is-active::before, .workspace-tab-header.is-active::after {
-	display: none;
-}
-
-svg * {
-	stroke-linecap: square;
-	stroke-linejoin: miter;
-	rx: 0;
-	ry: 0;
-}
-
-.menu {
-	padding: var(--size-2-1);
-}
-
-.menu-item {
-	padding: var(--size-4-1) var(--size-4-2);
-}
-
-.menu-separator {
-	margin: var(--size-2-1) calc(var(--size-2-1) * -1);
+	--font-text: 'PT Serif', serif;
+	--font-monospace: 'PT Mono', monospace;
+	--font-default: 'Inter', sans-serif;
+	--header-height: 36px;
 }
