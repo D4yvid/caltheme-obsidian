@@ -1,8 +1,84 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=PT+Mono&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
+body.is-focused {
+	--divider-color: var(--titlebar-background-focused);
+	--ribbon-background: var(--titlebar-background-focused);
+	--ribbon-background-collapsed: var(--titlebar-background-focused);
+	--titlebar-color: var(--titlebar-background-focused);
+}
+
 body {
 	--font-text: 'PT Serif', serif;
 	--font-monospace: 'PT Mono', monospace;
 	--font-default: 'Inter', sans-serif;
-	--header-height: 36px;
+	--header-height: 40px;
+	--divider-color: var(--titlebar-background);
+	--ribbon-background: var(--titlebar-background);
+	--ribbon-background-collapsed: var(--titlebar-background);
+	--titlebar-color: var(--titlebar-background);
+}
+
+.workspace-leaf {
+	--background-secondary: var(--titlebar-color);
+}
+
+.mod-root > .workspace-tabs > .workspace-tab-container > .workspace-leaf {
+	border-radius: 12px;
+}
+
+.workspace-tab-container {
+	margin: 4px;
+}
+
+.workspace-tab-header.is-active::before,
+.workspace-tab-header.is-active::after {
+	box-shadow: none !important;
+}
+
+.workspace-tab-header.is-active {
+	background: none !important;
+}
+
+.workspace-tab-header.is-active .workspace-tab-header-inner {
+	background: var(--background-secondary);
+}
+
+.workspace-tab-header .workspace-tab-header-inner {
+	border-radius: 8px;
+}
+
+.mod-left-split .workspace-tabs .workspace-tab-header-container .workspace-tab-header-inner {
+	/* Left-pane tabs */
+	border-radius: 50%;
+	height: 30px;
+	width: 30px;
+}
+.mod-left-split .workspace-tabs .workspace-tab-header-container .workspace-tab-header-container-inner {
+	padding: 1px;
+}
+
+.mod-left-split .workspace-tabs .workspace-tab-header-container .sidebar-toggle-button .clickable-icon {
+	padding: 8px;
+}
+
+.mod-left-split .workspace-tabs div.workspace-tab-header-container .workspace-tab-header-inner .workspace-tab-header-inner-icon {
+	width: 18px;
+	height: 18px;
+}
+
+.workspace-split.mod-root {
+	background: none;
+}
+
+.workspace {
+	background-color: var(--titlebar-color);
+}
+
+.status-bar {
+	bottom: 8px;
+	right: 8px;
+	border-radius: 12px;
+	border: none;
+
+	background: var(--background-secondary);
 }
