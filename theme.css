@@ -1,4 +1,95 @@
+@import url('https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=PT+Mono&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+@font-face {
+	font-family: boxicons;
+		font-weight: 400;
+		font-style: normal;
+		src: url(https://unpkg.com/boxicons@2.1.4/fonts/boxicons.eot);
+		src: url(https://unpkg.com/boxicons@2.1.4/fonts/boxicons.eot) format('embedded-opentype'),
+				 url(https://unpkg.com/boxicons@2.1.4/fonts/boxicons.woff2) format('woff2'),
+				 url(https://unpkg.com/boxicons@2.1.4/fonts/boxicons.woff) format('woff'),
+				 url(https://unpkg.com/boxicons@2.1.4/fonts/boxicons.ttf) format('truetype'),
+				 url(https://unpkg.com/boxicons@2.1.4/fonts/boxicons.svg?#boxicons) format('svg')
+}
+
+:root {
+	--sumiInk0: #16161D;
+	--sumiInk1b: #181820;
+	--sumiInk1: #1F1F28;
+	--sumiInk2: #2A2A37;
+	--sumiInk3: #363646;
+	--sumiInk4: #54546D;
+	--waveBlue1: #223249;
+	--waveBlue2: #2D4F67;
+	--winterGreen: #2B3328;
+	--winterYellow: #49443C;
+	--winterRed: #43242B;
+	--winterBlue: #252535;
+	--autumnGreen: #76946A;
+	--autumnRed: #C34043;
+	--autumnYellow: #DCA561;
+	--samuraiRed: #E82424;
+	--roninYellow: #FF9E3B;
+	--waveAqua1: #6A9589;
+	--dragonBlue: #658594;
+	--oldWhite: #C8C093;
+	--fujiWhite: #DCD7BA;
+	--fujiGray: #727169;
+	--springViolet1: #938AA9;
+	--oniViolet: #957FB8;
+	--crystalBlue: #7E9CD8;
+	--springViolet2: #9CABCA;
+	--springBlue: #7FB4CA;
+	--lightBlue: #A3D4D5;
+	--waveAqua2: #7AA89F;
+	--springGreen: #98BB6C;
+	--boatYellow1: #938056;
+	--boatYellow2: #C0A36E;
+	--carpYellow: #E6C384;
+	--sakuraPink: #D27E99;
+	--waveRed: #E46876;
+	--peachRed: #FF5D62;
+	--surimiOrange: #FFA066;
+	--katanaGray: #717C7C;
+	--dark0-hard: #1d2021;
+	--dark0: #282828;
+	--dark0-soft: #32302f;
+	--dark1: #3c3836;
+	--dark2: #504945;
+	--dark3: #665c54;
+	--dark4: #7c6f64;
+	--gray: #928374;
+	--light0-hard: #f9f5d7;
+	--light0: #fbf1c7;
+	--light0-soft: #f2e5bc;
+	--light1: #ebdbb2;
+	--light2: #d5c4a1;
+	--light3: #bdae93;
+	--light4: #a89984;
+	--bright-red: #fb4934;
+	--bright-green: #b8bb26;
+	--bright-yellow: #fabd2f;
+	--bright-blue: #83a598;
+	--bright-purple: #d3869b;
+	--bright-aqua: #8ec07c;
+	--bright-orange: #fe8019;
+	--neutral-red: #cc241d;
+	--neutral-green: #98971a;
+	--neutral-yellow: #d79921;
+	--neutral-blue: #458588;
+	--neutral-purple: #b16286;
+	--neutral-aqua: #689d6a;
+	--neutral-orange: #d65d0e;
+	--faded-red: #9d0006;
+	--faded-green: #79740e;
+	--faded-yellow: #b57614;
+	--faded-blue: #076678;
+	--faded-purple: #8f3f71;
+	--faded-aqua: #427b58;
+	--faded-orange: #af3a03;
+}
+
 
 body.is-focused {
 	--divider-color: var(--titlebar-background-focused);
@@ -16,6 +107,11 @@ body {
 	--ribbon-background: var(--titlebar-background);
 	--ribbon-background-collapsed: var(--titlebar-background);
 	--titlebar-color: var(--titlebar-background);
+
+	--titlebar-background-focused: var(--sumiInk1);
+	--titlebar-background: var(--sumiInk0);
+	--background-primary: var(--sumiInk2);
+	--background-secondary: var(--sumiInk3);
 }
 
 .workspace-leaf {
@@ -81,4 +177,97 @@ body {
 	border: none;
 
 	background: var(--background-secondary);
+}
+
+.kanban-plugin__item.is-complete > * {
+	text-decoration: line-through !important;
+	opacity: 0.7;
+}
+
+thead .table-cell-wrapper {
+	font-weight: normal;
+}
+
+.metadata-container {
+	font-size: 14px;
+	font-family: var(--font-default);
+	background: rgb(255, 255, 255, .05);
+	padding: 8px;
+	border-radius: 16px;
+
+	& .metadata-properties-heading > .metadata-properties-title {
+		font-size: 15px;
+
+		&::before {
+			content: "\eb40";
+
+			font-size: 22px;
+			font-family: boxicons !important;
+			font-weight: 400;
+			font-style: normal;
+			font-variant: normal;
+			line-height: 1;
+			text-rendering: auto;
+			display: inline-block;
+			text-transform: none;
+			speak: none;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+
+			margin-right: 4px;
+		}
+
+		display: flex;
+		align-items: center;
+
+		font-family: var(--font-default);
+		font-weight: 700;
+	}
+
+	& .metadata-property-key {
+		min-width: 153px;
+		flex-direction: row;
+		align-items: center;
+		justify-content: right;
+		background: rgba(255, 255, 255, .05);
+		border-right: 2px solid rgba(255, 255, 255, .1);
+		font-family: var(--font-default), boxicons !important;
+
+		& .metadata-property-icon svg {
+			display: none;
+		}
+
+		& .metadata-property-key-input {
+			font-size: 14px;
+			text-align: right;
+			color: white;
+
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+		}
+
+		border-radius: 0;
+	}
+
+	& .metadata-properties {
+		overflow: hidden;
+
+		background: rgba(255, 255, 255, .1);
+		border-radius: 12px;
+	}
+
+	& .metadata-property {
+		border-radius: 0;
+		box-shadow: none !important;
+	}
+
+	& .metadata-properties {
+		gap: 0;
+	}
+
+	& .metadata-property-value div {
+		display: flex;
+		align-items: center;
+	}
+
 }
